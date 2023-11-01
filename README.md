@@ -29,6 +29,17 @@ Answers to accelerate config:
 ## Fine-tuning SD with LoRA
 ![LoRA fine-tuning pipeline](/img/stable_diffusion_pipeline.png)
 
+## Dataset
+The common maternal fetal ultrasound planes [1]. The summary of this dataset.
+| Category | No. Train | No. Test |
+| ----------- | ----------- | ----------- |
+| abdomen | 353  | 358  |
+| brain   | 1620 | 1472 |
+| femur   | 516  | 524  |
+| thorax  | 1058 | 660  |
+| cervix  | 981  | 645  |
+| other   | 2601 | 1612 |
+
 ## LoRA Training Config
 ```json
 {
@@ -111,3 +122,6 @@ a photo of fetal abdomen
 a photo of fetal femur
 ```
 ![fetal femur](/img/00002-3614008528.png)
+
+## Reference
+[1] Burgos-Artizzu, X.P., Coronado-Gutiérrez, D., Valenzuela-Alcaraz, B. et al. Evaluation of deep convolutional neural networks for automatic classification of common maternal fetal ultrasound planes. Sci Rep 10, 10200 (2020). https://doi.org/10.1038/s41598-020-67076-5

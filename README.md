@@ -31,16 +31,17 @@ Answers to accelerate config:
 
 ## Dataset
 The common maternal fetal ultrasound planes [1]. The summary of this dataset.
-| Category | No. Train | No. Test |
-| ----------- | ----------- | ----------- |
-| abdomen | 353  | 358  |
-| brain   | 1620 | 1472 |
-| femur   | 516  | 524  |
-| thorax  | 1058 | 660  |
-| cervix  | 981  | 645  |
-| other   | 2601 | 1612 |
+| Category | No. Train | No. Test | No. Train (LoRA) |
+| ----------- | ----------- | ----------- | ----------- |
+| abdomen | 353  | 358  | 20 |
+| brain   | 1620 | 1472 | 20 |
+| femur   | 516  | 524  | 20 |
+| thorax  | 1058 | 660  | 20 |
+| cervix  | 981  | 645  | 20 |
+| other   | 2601 | 1612 | 20 |
 
 ## LoRA Training Config
+An example (**fetal abdomen**) of LoRA training configuration. 
 ```json
 {
   "pretrained_model_name_or_path": "/root/autodl-tmp/sd_ckpt/v1-5-pruned.safetensors",
@@ -110,16 +111,26 @@ The common maternal fetal ultrasound planes [1]. The summary of this dataset.
 
 ## Inference
 
+| LoRA STRENGTH | Sampler | Seed |
+| ----------- | ----------- | ----------- |
+| 0.5, 0.6, 0.7, 0.9, 1.0, 1.2, 1.5 | Euler a, Euler, DPM2, DPM2 a, DPM++ 2S a, DPM++ 2M, DPM++ SDE, DPM adaptive, DPM2 Karras, DPM2 a Karras, DPM++ SDE Karras, DPM++ 2M SDE Karras, DDIM | 3502338861 |
+
 ### Fetal Abdomen Example
 ```
 # prompt
-a photo of fetal abdomen
+a photo of fetal abdomen <lora:abdomen_v1.0:STRENGTH>
 ```
 ![fetal abdomen](/img/00001-3614008528.png)
 
 ```
 # prompt
-a photo of fetal femur
+a photo of fetal femur <lora:femur_v1.0:STRENGTH>
+```
+![fetal femur](/img/00002-3614008528.png)
+
+```
+# prompt
+a photo of fetal brain <lora:brain_v1.0:STRENGTH>
 ```
 ![fetal femur](/img/00002-3614008528.png)
 

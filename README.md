@@ -132,7 +132,7 @@ a photo of fetal femur <lora:femur_v1.0:STRENGTH>
 # prompt
 a photo of fetal brain <lora:brain_v1.0:STRENGTH>
 ```
-![fetal femur](/img/00002-3614008528.png)
+![fetal brain](/img/0001-3502338861.png)
 
 ## Reference
 [1] Burgos-Artizzu, X.P., Coronado-Gutiérrez, D., Valenzuela-Alcaraz, B. et al. Evaluation of deep convolutional neural networks for automatic classification of common maternal fetal ultrasound planes. Sci Rep 10, 10200 (2020). https://doi.org/10.1038/s41598-020-67076-5

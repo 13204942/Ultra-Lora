@@ -1,0 +1,2 @@
+a photo of fetal ultrasound <lora:fetal_ultrasound_v2.0:0.3>
+Steps: 20, Sampler: Euler, CFG scale: 7, Seed: 1955323776, Size: 512x512, Model hash: cc6cb27103, Model: v1-5-pruned-emaonly, Clip skip: 2, Lora hashes: fetal_ultrasound_v2.0: d435cfc4110a, Version: v1.3.0
